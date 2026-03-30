@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0047)file:///C:/Users/Parker/Downloads/index_31.html -->
+<!-- saved from url=(0047)file:///C:/Users/Parker/Downloads/index_32.html -->
 <html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -211,6 +211,9 @@ footer{padding:2.5rem 2rem;text-align:center;background:var(--bg);border-top:1px
 .btn-row{display:flex;gap:.6rem;margin-top:.1rem}
 .time-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.32rem}
 .time-btn{padding:.52rem;border-radius:6px;font-size:.79rem;background:rgba(255,255,255,.04);color:var(--c3);border:1px solid rgba(201,168,76,.14);font-weight:400;transition:all .18s}
+.time-btn.busy{background:rgba(255,60,60,.08)!important;color:rgba(255,100,100,.5)!important;border-color:rgba(255,60,60,.2)!important;cursor:not-allowed!important;text-decoration:line-through}
+.time-btn.avail{border-color:rgba(201,168,76,.35)!important}
+.time-btn.loading{opacity:.45;cursor:not-allowed;pointer-events:none}
 .time-btn.sel{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#07050f;border:none;font-weight:700}
 .summary-box{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.2);border-radius:8px;padding:1rem;font-size:.8rem;color:var(--c3)}
 .summary-box strong{color:var(--gold);display:block;margin-bottom:.4rem}
@@ -253,7 +256,7 @@ footer{padding:2.5rem 2rem;text-align:center;background:var(--bg);border-top:1px
 <body>
 
 <!-- PARTICLES -->
-<div id="particles"><div class="pt" style="left: 55.1268%; bottom: -8px; width: 3.16039px; height: 3.16039px; opacity: 0.288386; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 9.48116px; animation: 20.1908s linear 6.98783s infinite normal none running fp;"></div><div class="pt" style="left: 47.3027%; bottom: -8px; width: 1.50044px; height: 1.50044px; opacity: 0.576126; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 4.50132px; animation: 12.3138s linear 1.73314s infinite normal none running fp;"></div><div class="pt" style="left: 51.0064%; bottom: -8px; width: 0.997464px; height: 0.997464px; opacity: 0.452371; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 2.99239px; animation: 15.6107s linear 7.1367s infinite normal none running fp;"></div><div class="pt" style="left: 31.8905%; bottom: -8px; width: 2.34545px; height: 2.34545px; opacity: 0.571222; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 7.03636px; animation: 13.1963s linear 8.56056s infinite normal none running fp;"></div><div class="pt" style="left: 58.0657%; bottom: -8px; width: 1.65112px; height: 1.65112px; opacity: 0.563148; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 4.95336px; animation: 12.4838s linear 8.52042s infinite normal none running fp;"></div><div class="pt" style="left: 0.246472%; bottom: -8px; width: 2.98138px; height: 2.98138px; opacity: 0.500806; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 8.94415px; animation: 20.2925s linear 10.0189s infinite normal none running fp;"></div><div class="pt" style="left: 33.6368%; bottom: -8px; width: 1.95657px; height: 1.95657px; opacity: 0.422086; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 5.86973px; animation: 17.4172s linear 6.75138s infinite normal none running fp;"></div><div class="pt" style="left: 24.4299%; bottom: -8px; width: 2.57281px; height: 2.57281px; opacity: 0.386163; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 7.71844px; animation: 11.3581s linear 6.41658s infinite normal none running fp;"></div><div class="pt" style="left: 68.394%; bottom: -8px; width: 1.89912px; height: 1.89912px; opacity: 0.588041; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 5.69735px; animation: 15.3131s linear 2.34988s infinite normal none running fp;"></div><div class="pt" style="left: 14.7642%; bottom: -8px; width: 1.03156px; height: 1.03156px; opacity: 0.434404; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 3.09467px; animation: 23.0448s linear 7.63294s infinite normal none running fp;"></div><div class="pt" style="left: 84.783%; bottom: -8px; width: 1.40396px; height: 1.40396px; opacity: 0.35579; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 4.21188px; animation: 23.4669s linear 8.98448s infinite normal none running fp;"></div><div class="pt" style="left: 67.0777%; bottom: -8px; width: 0.904571px; height: 0.904571px; opacity: 0.343693; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 2.71371px; animation: 19.8296s linear 4.17802s infinite normal none running fp;"></div><div class="pt" style="left: 9.70877%; bottom: -8px; width: 2.31702px; height: 2.31702px; opacity: 0.259051; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 6.95107px; animation: 23.5593s linear 11.1866s infinite normal none running fp;"></div><div class="pt" style="left: 96.9816%; bottom: -8px; width: 1.35367px; height: 1.35367px; opacity: 0.294375; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 4.061px; animation: 21.4101s linear 0.0466224s infinite normal none running fp;"></div><div class="pt" style="left: 74.3919%; bottom: -8px; width: 2.52331px; height: 2.52331px; opacity: 0.40794; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 7.56992px; animation: 19.6152s linear 13.3792s infinite normal none running fp;"></div><div class="pt" style="left: 93.7721%; bottom: -8px; width: 1.33615px; height: 1.33615px; opacity: 0.219203; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 4.00845px; animation: 21.3933s linear 5.15751s infinite normal none running fp;"></div><div class="pt" style="left: 8.12391%; bottom: -8px; width: 2.57073px; height: 2.57073px; opacity: 0.255173; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 7.71218px; animation: 15.0671s linear 7.77529s infinite normal none running fp;"></div><div class="pt" style="left: 38.5548%; bottom: -8px; width: 2.05492px; height: 2.05492px; opacity: 0.155342; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 6.16476px; animation: 13.158s linear 3.55004s infinite normal none running fp;"></div><div class="pt" style="left: 60.7639%; bottom: -8px; width: 1.68253px; height: 1.68253px; opacity: 0.53524; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 5.0476px; animation: 13.0372s linear 6.38137s infinite normal none running fp;"></div><div class="pt" style="left: 30.9536%; bottom: -8px; width: 1.42007px; height: 1.42007px; opacity: 0.165698; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 4.26021px; animation: 22.0301s linear 13.0012s infinite normal none running fp;"></div><div class="pt" style="left: 55.4568%; bottom: -8px; width: 2.09009px; height: 2.09009px; opacity: 0.519833; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 6.27027px; animation: 15.8158s linear 8.79246s infinite normal none running fp;"></div><div class="pt" style="left: 94.5506%; bottom: -8px; width: 2.90547px; height: 2.90547px; opacity: 0.279588; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 8.71642px; animation: 20.9285s linear 2.11975s infinite normal none running fp;"></div><div class="pt" style="left: 50.3069%; bottom: -8px; width: 2.81015px; height: 2.81015px; opacity: 0.387457; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 8.43045px; animation: 13.143s linear 11.8753s infinite normal none running fp;"></div><div class="pt" style="left: 24.2894%; bottom: -8px; width: 1.94125px; height: 1.94125px; opacity: 0.555319; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 5.82376px; animation: 13.2533s linear 11.9664s infinite normal none running fp;"></div><div class="pt" style="left: 67.6054%; bottom: -8px; width: 3.24158px; height: 3.24158px; opacity: 0.189599; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 9.72475px; animation: 10.0562s linear 1.47388s infinite normal none running fp;"></div><div class="pt" style="left: 84.3068%; bottom: -8px; width: 2.41243px; height: 2.41243px; opacity: 0.433696; box-shadow: rgba(201, 168, 76, 0.55) 0px 0px 7.23731px; animation: 19.9421s linear 11.922s infinite normal none running fp;"></div></div>
+<div id="particles"></div>
 
 <!-- NAV -->
 <nav id="nav">
@@ -686,19 +689,22 @@ footer{padding:2.5rem 2rem;text-align:center;background:var(--bg);border-top:1px
       <div class="step-label">Escolha data e horário</div>
       <div>
         <label>Data *</label>
-        <input type="date" id="f-date" onchange="checkStep3()">
+        <input type="date" id="f-date" onchange="loadAvailability(this.value)">
       </div>
       <div>
         <label style="margin-bottom:.7rem">Horário *</label>
-        <div class="time-grid" id="time-grid">
-          <button class="time-btn" onclick="selectTime(this,&#39;09:00&#39;)">09:00</button>
-          <button class="time-btn" onclick="selectTime(this,&#39;10:00&#39;)">10:00</button>
-          <button class="time-btn" onclick="selectTime(this,&#39;11:00&#39;)">11:00</button>
-          <button class="time-btn" onclick="selectTime(this,&#39;14:00&#39;)">14:00</button>
-          <button class="time-btn" onclick="selectTime(this,&#39;15:00&#39;)">15:00</button>
-          <button class="time-btn" onclick="selectTime(this,&#39;16:00&#39;)">16:00</button>
-          <button class="time-btn" onclick="selectTime(this,&#39;17:00&#39;)">17:00</button>
-          <button class="time-btn" onclick="selectTime(this,&#39;18:00&#39;)">18:00</button>
+        <div id="time-grid-wrap">
+          <div class="time-grid" id="time-grid">
+            <button class="time-btn" onclick="selectTime(this,&#39;09:00&#39;)">09:00</button>
+            <button class="time-btn" onclick="selectTime(this,&#39;10:00&#39;)">10:00</button>
+            <button class="time-btn" onclick="selectTime(this,&#39;11:00&#39;)">11:00</button>
+            <button class="time-btn" onclick="selectTime(this,&#39;14:00&#39;)">14:00</button>
+            <button class="time-btn" onclick="selectTime(this,&#39;15:00&#39;)">15:00</button>
+            <button class="time-btn" onclick="selectTime(this,&#39;16:00&#39;)">16:00</button>
+            <button class="time-btn" onclick="selectTime(this,&#39;17:00&#39;)">17:00</button>
+            <button class="time-btn" onclick="selectTime(this,&#39;18:00&#39;)">18:00</button>
+          </div>
+          <div id="avail-msg" style="text-align:center;font-size:.8rem;margin-top:.6rem;color:var(--c4);font-style:italic;display:none"></div>
         </div>
       </div>
       <div class="summary-box" id="summary" style="display:none">
@@ -736,9 +742,10 @@ footer{padding:2.5rem 2rem;text-align:center;background:var(--bg);border-top:1px
   </svg>
 </button>
 
-<script>
+<script data-cfasync="false" src="file:///C:/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ── CONFIG ── */
 const WH = "https://nickolascavaglieri.app.n8n.cloud/webhook/mestra-mercedes-agendamento";
+const AV = "https://nickolascavaglieri.app.n8n.cloud/webhook/mestra-mercedes-disponibilidade";
 const WA_URL = "https://wa.me/5519981411295";
 
 
@@ -879,6 +886,87 @@ function updateSummary(){
   }
 }
 
+/* ── AVAILABILITY ── */
+async function loadAvailability(date) {
+  if (!date) return;
+  checkStep3();
+  
+  const grid = document.getElementById('time-grid');
+  const msg = document.getElementById('avail-msg');
+  const today = new Date().toISOString().split('T')[0];
+  
+  // Check if date is in the past
+  if (date <= today) {
+    msg.textContent = '⚠️ Selecione uma data futura.';
+    msg.style.display = 'block';
+    msg.style.color = 'rgba(255,140,0,.7)';
+    return;
+  }
+  
+  // Check if weekend
+  const dow = new Date(date + 'T12:00:00').getDay();
+  if (dow === 0 || dow === 6) {
+    const btns = grid.querySelectorAll('.time-btn');
+    btns.forEach(b => {
+      b.classList.remove('sel','avail');
+      b.classList.add('busy');
+      b.disabled = true;
+    });
+    msg.textContent = '❌ Atendimento apenas de segunda a sexta.';
+    msg.style.display = 'block';
+    msg.style.color = 'rgba(255,80,80,.7)';
+    selectedTime = '';
+    checkStep3();
+    return;
+  }
+
+  // Show loading state
+  const btns = grid.querySelectorAll('.time-btn');
+  btns.forEach(b => { b.classList.add('loading'); b.disabled = true; });
+  msg.textContent = '⏳ Verificando disponibilidade...';
+  msg.style.display = 'block';
+  msg.style.color = 'var(--c4)';
+  selectedTime = '';
+  document.getElementById('btn-confirm').disabled = true;
+
+  try {
+    const res = await fetch(AV + '?date=' + date, { signal: AbortSignal.timeout(15000) });
+    const data = await res.json();
+    
+    let availCount = 0;
+    data.slots.forEach(slot => {
+      const btn = [...btns].find(b => b.textContent.trim() === slot.time);
+      if (!btn) return;
+      btn.classList.remove('loading','busy','avail','sel');
+      if (slot.available) {
+        btn.classList.add('avail');
+        btn.disabled = false;
+        availCount++;
+      } else {
+        btn.classList.add('busy');
+        btn.disabled = true;
+        if (selectedTime === slot.time) selectedTime = '';
+      }
+    });
+    
+    if (availCount === 0) {
+      msg.textContent = '❌ Sem horários disponíveis nesta data. Escolha outro dia.';
+      msg.style.color = 'rgba(255,80,80,.7)';
+    } else {
+      msg.textContent = `✅ ${availCount} horário${availCount>1?'s':''} disponível${availCount>1?'is':''} nesta data.`;
+      msg.style.color = 'rgba(100,200,120,.8)';
+    }
+  } catch(e) {
+    console.warn('Availability error:', e);
+    btns.forEach(b => { b.classList.remove('loading','busy'); b.classList.add('avail'); b.disabled = false; });
+    msg.textContent = '⚠️ Não foi possível verificar. Selecione um horário e confirme.';
+    msg.style.color = 'rgba(255,140,0,.7)';
+  }
+  
+  msg.style.display = 'block';
+  updateSummary();
+}
+
 /* ── SUBMIT ── */
 async function submitForm(){
   const btn=document.getElementById('btn-confirm');
@@ -900,13 +988,4 @@ async function submitForm(){
   document.getElementById('s-name').textContent=payload.name;
   document.getElementById('s-tipo').textContent=payload.tipo;
   document.getElementById('s-date').textContent=payload.date;
-  document.getElementById('s-time').textContent=payload.time;
-  document.getElementById('s-email').textContent=payload.email;
-  goStep(4);
-}
-
-/* ── ESC KEY ── */
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
-</script>
-
-</body></html>
+  document.getElementById('s-time').</script></body></html>
